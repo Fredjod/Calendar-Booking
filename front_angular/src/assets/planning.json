@@ -1,0 +1,81 @@
+﻿[ 
+  {
+    "day": "06/01/19",
+    "events": [
+      {
+        "type": "Cours",
+        "schedule": "09h00-12h30",
+        "teacher": "Tom",
+        "description": "bla bla bla",
+        "stock": "4",
+        "display_attributes": {
+          "stock_class": "blue_dot_stock"
+        }
+      }
+    ]
+  },
+  {
+    "day": "06/02/19",
+    "events": [
+      {
+        "type": "Cours",
+        "schedule": "14h00-17h30",
+        "teacher": "Tom",
+        "description": "bla bla bla",
+        "stock": "4",
+        "display_attributes": {
+          "stock_class": "blue_dot_stock"
+        }
+
+      },
+      {
+        "type": "Croisiere",
+        "schedule": "Journée",
+        "teacher": "Tom",
+        "description": "bla bla bla",
+        "stock": "6",
+        "display_attributes": {
+          "stock_class": "lightblue_dot_stock"
+        }
+      }
+    ]
+  },
+  {
+    "day": "06/03/19",
+    "events": [
+      {
+        "type": "closed",
+        "schedule": "Journée",
+        "teacher": "",
+        "description": "Fermé pour cause de travaux",
+        "stock": ""
+      }
+    ]
+  },
+  {
+    "day": "06/04/19",
+    "events": [
+      {
+        "type": "Cours",
+        "schedule": "09h00-12h30",
+        "teacher": "Tom",
+        "description": "bla bla bla",
+        "stock": "1",
+        "display_attributes": {
+          "stock_class": "blue_dot_stock"
+        }
+      },
+      {
+        "type": "Cours",
+        "schedule": "14h00-17h30",
+        "teacher": "Tom",
+        "description": "bla bla bla",
+        "stock": "0",
+        "display_attributes": {
+          "stock_class": "blue_dot_stock"
+        }
+      }
+    ]
+
+  }
+]

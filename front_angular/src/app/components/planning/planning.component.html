@@ -1,0 +1,36 @@
+<div style="overflow-x:auto;">
+   <table *ngFor="let day of planningData.getPlanningDataToDisplay()">
+      <tr>
+         <td colspan="2" class="day">{{ day.id | date:'E dd MMMM' }} </td>
+      </tr>
+      <tr *ngFor="let event of day.events">
+         <td class="td_schedule">{{ event.schedule }}</td>
+         <td>
+            <div *ngIf="event.type.localeCompare('closed')!=0;else closed_event">
+               <mat-expansion-panel
+                  [expanded]="isIntoBasket(event, day.id)">
+                  <mat-expansion-panel-header>
+                     <mat-panel-title>
+                       {{ event.type }}
+                           <span class="{{ getStockClass(event.display_attributes, event.stock) }}">
+                              {{ getStockValue(event, day.id, event.stock) }}
+                           </span>
+                     </mat-panel-title>
+                  </mat-expansion-panel-header>
+                     Enseignant: {{ event.teacher }}<br>
+                     {{ event.description }}<p>
+                     <mat-checkbox 
+                        (change)="onChange($event, event, day.id)"
+                        [disabled] = "isDisabledToggle(event.stock)"
+                        [checked] = "isIntoBasket(event, day.id)">
+                        Ajouter au panier
+                     </mat-checkbox>
+               </mat-expansion-panel>
+            </div>
+         </td>
+         <ng-template #closed_event>
+            <div class="closed_event">{{ event.description }}</div>
+         </ng-template>
+      </tr>
+   </table>
+</div>

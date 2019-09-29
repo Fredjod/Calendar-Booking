@@ -1,0 +1,40 @@
+ <div *ngIf="basket.getItemsNumber()>0; else empty_basket">
+   Votre panier contient les sessions suivantes:
+   <mat-list>
+     <mat-list-item *ngFor="let item of basket.getItems()">
+      <button mat-icon-button title="Supprimer cet élément du panier" (click)="deleteItem(item)">
+         <mat-icon mat-list-icon>delete</mat-icon>
+      </button>
+       <h4 mat-line>{{ item.type }} avec {{ item.teacher }} </h4>
+       <p mat-line> {{ item.day | date:'E dd MMMM' }} de {{ item.schedule }} </p>
+     </mat-list-item>
+   </mat-list>
+
+   Pour finaliser vos réservations, merci de remplir les informations suivantes:
+   <form class = "tp-form">
+      <mat-form-field class = "tp-full-width">
+         <input matInput placeholder = "votre prénom" value = "">
+      </mat-form-field>
+      <mat-form-field class = "tp-full-width">
+         <input matInput placeholder = "votre nom" value = "">
+      </mat-form-field>
+      <mat-form-field class = "tp-full-width">
+         <input matInput placeholder = "votre email" [formControl] = "emailFormControl">
+         <mat-error *ngIf = "emailFormControl.hasError('email') 
+            && !emailFormControl.hasError('required')">
+            Please enter a valid email address
+         </mat-error>
+         <mat-error *ngIf = "emailFormControl.hasError('required')">
+            Email is <strong>required</strong>
+         </mat-error>
+      </mat-form-field>
+      <button routerLink="/confirmation" mat-raised-button>Confirmer</button>
+   </form>
+</div>
+
+<ng-template #empty_basket>
+   <div>
+      <h4>Votre panier est vide.</h4>
+      Ajouter des sessions de formation depuis le menu "Calendrier".
+   </div>
+</ng-template>

@@ -1,0 +1,20 @@
+.tp-form {
+   min-width: 150px;
+   max-width: 500px;
+   width: 100%;
+}
+.tp-full-width {
+   width: 100%;
+}
+
+ul {
+  /*background: lightblue;
+  margin: 2px;
+  border-radius: 15px;
+  */
+  margin-left: 10px;
+  border-left: 6px solid blue;
+  background-color: lightblue;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}

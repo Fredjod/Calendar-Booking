@@ -1,0 +1,22 @@
+.mat-toolbar {
+    /*
+    position: sticky;
+    position: -webkit-sticky;
+    */
+    position:fixed;
+    top: 0; /* Sets the sticky toolbar to be on top */
+    z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
+}
+
+.filler {
+   flex: 1 1 auto;
+}
+
+.tool-button {
+	background: rgb(0,0,255);
+	margin-left: 10px;
+	font-size: 12px;
+	text-align: center;
+	color:white;
+}
+

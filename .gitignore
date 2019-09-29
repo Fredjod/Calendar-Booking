@@ -1,0 +1,77 @@
+# compiled output
+/front_angular/dist
+/front_angular/tmp
+/front_angular/out-tsc
+# Only exists if Bazel was run
+/front_angular/bazel-out
+/back_springboot/target
+HELP.md
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**
+!**/src/test/**
+/Sandbox/bin
+
+# dependencies
+/front_angular/node_modules
+
+# profiling files
+chrome-profiler-events.json
+speed-measure-plugin.json
+
+# IDEs and editors
+/.metadata
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+.apt_generated
+.factorypath
+.settings
+.springBeans
+.sts4-cache
+.editorconfig
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/back_springboot/nbproject/private/
+/back_springboot/nbbuild/
+/back_springboot/dist/
+/back_springboot/nbdist/
+/back_springboot/.nb-gradle/
+/back_springboot/build/
+
+# misc
+/front_angular/.sass-cache
+/front_angular/connect.lock
+/front_angular/coverage
+/front_angular/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/front_angular/typings
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Data files
+/data_mongo/data/db
+
+# Temporary docker .tgz files
+/docker/deploy

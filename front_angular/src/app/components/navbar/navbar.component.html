@@ -1,0 +1,7 @@
+<mat-toolbar color = "primary">
+	<button mat-button routerLink="/"><font size="3px">C-Booking</font></button>
+	<button mat-raised-button class="tool-button" routerLink="/planning">Calendrier</button>
+	  <button mat-raised-button class="tool-button" matBadge = "{{ basketService.getItemsNumber() }}" matBadgePosition = "after" matBadgeColor = "accent" routerLink="/basket">Panier</button>
+	<span class = "filler"></span>
+	  <button mat-button routerLink="/about">About</button>
+</mat-toolbar>

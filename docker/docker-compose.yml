@@ -1,0 +1,39 @@
+version: "3"
+services:
+  mongo:
+    image: mongo
+    ports:
+      - "127.0.0.1:27017:27017"
+    networks:
+      - cbnet
+    volumes:
+      # dev volume
+      - ./stack/mongo/data/db:/data/db
+      # prd volume
+      # - ./data/db:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=mongoadmin
+      - MONGO_INITDB_ROOT_PASSWORD=secret
+
+  springboot:
+    image: springboot
+    depends_on:
+      - mongo
+    ports:
+      - "8080:8080"
+    networks:
+      - cbnet
+
+  httpd:
+    image: apache_httpd
+    depends_on:
+      - springboot
+    ports:
+      - "80:80"
+    networks:
+      - cbnet
+    volumes:
+      - ./stack/front/front_angular/:/usr/local/apache2/htdocs/calendarbooking:ro
+
+networks:
+  cbnet:

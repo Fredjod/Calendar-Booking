@@ -1,0 +1,61 @@
+.blue_dot_stock {
+  height: 20px;
+  width: 20px;
+  background-color: blue;
+  border-radius: 50%;
+  display: inline-block;
+  color:white;
+  text-align:center;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+.lightblue_dot_stock {
+  height: 20px;
+  width: 20px;
+  background-color: lightblue;
+  border-radius: 50%;
+  display: inline-block;
+  color:white;
+  text-align:center;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+.soldout_dot_stock {
+  height: 20px;
+  width: 20px;
+  background-color: grey;
+  border-radius: 50%;
+  display: inline-block;
+  color:white;
+  text-align:center;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+.closed_event {
+	background: silver;
+	padding: 15px;
+
+}
+
+.day {
+	border-bottom: 2px solid lightgrey;
+  border-top: 0px solid lightgrey;
+	padding: 5px;
+	background-color: rgb(234, 236, 244);
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+table {
+	border-collapse: collapse;
+  width: 100%;
+}
+
+.td_schedule {
+  border-right: solid 1px #f00;
+  border-bottom: solid 2px lightgrey;
+  width: 12%;
+}
