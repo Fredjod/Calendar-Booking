@@ -1,5 +1,5 @@
 # compiled output
-/front_angular/dist
+/front_angular/dist/front_angular
 /front_angular/tmp
 /front_angular/out-tsc
 # Only exists if Bazel was run

@@ -31,6 +31,7 @@ server=$2
 echo -e "\nThe deployed scope is: \"$scope\" on server: \"$server\""
 
 # Clean previous created .tgz files
+mkdir -p ./docker/deploy
 rm ./docker/deploy/*.tgz
 
 # Tar fromt web  files for building the docker image
