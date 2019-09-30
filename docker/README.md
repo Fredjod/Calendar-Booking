@@ -19,7 +19,7 @@ https://github.com/docker-library/mongo/tree/2f757af6d12f4239cf5541455b011921ee4
 ** Connect to the mongo shell, use of CBdb database**
 
 	$ docker run -it --rm -v $(pwd)/data_mongo/data:/data/db mongo mongo -u mongoadmin -p secret --authenticationDatabase admin --host docker.for.mac.localhost CBdb
-ou
+Or
 
 	$ docker run -it --rm -v $(pwd)/data_mongo/data:/data/db mongo mongo --host mongodb://mongoadmin:secret@docker.for.mac.localhost:27017/CBdb?authSource=admin
 	
@@ -33,7 +33,7 @@ Import JSON file into a "bDay" (Booking Days) collection:
 	db.bDay.insert(o);
 	db.bDay.find().pretty()
 
-#HOW-TO SpringBoot
+#HOW-TO RESTFull/Spring Boot
 
 Origin: https://hub.docker.com/_/maven  
 
@@ -42,24 +42,22 @@ Add to /etc/hosts the following line:
 	127.0.0.1       cbooking_mongo_1
 
 
-**Build the Springboot image**  
+** Run the RESTfull services within a Docker container **    
 
 	$ docker build -t spring ./back_springboot
-
-**Run the app**  
-
 	$ docker run -dt -p 127.0.0.1:8080:8080 --name CB_spring spring
-	
+
+Otherwise, a run configuration is also available in Eclipse env.
 
 #HOW-TO Angular/Httpd
 
-**Launch locally with nodejs (http://localhost:4200/)**
+**Run with Nodejs (quicker way for debugging purposes)**
 
 	$ cd ./front_angular
 	$ ng serve --host 0.0.0.0 --disable-host-check
-	And then goto http://localhost:4200/
+And then goto [http://localhost:4200/](http://localhost:4200/)
 	
-**Build Docker image and run the contener on http://localhost:80/**
+**Run a Docker image on (for testing with Docker)**
 
 1) Potentially stop the local HTTPD Apache service for freeing the 80 port
 
@@ -69,17 +67,12 @@ Add to /etc/hosts the following line:
 	
 	$ ng build --prod --base-href /calendarbooking/ --deploy-url /calendarbooking/
 	
-3) Buid an Httpd (Apache) image with Docker
+3) Build an Httpd (Apache) image with Docker
 
 	$ docker build -t web ./front_angular/dist/
 	
 4) Run the Httpd docker, angular app mounted in the htdocs dir
 
-	$ docker run -d --name CB_web -p 80:80 -v $(pwd)/front_angular/dist/calendarbooking/:/usr/local/apache2/htdocs/calendarbooking web
+	$ docker run -d --name CB_web -p 80:80 -v $(pwd)/front_angular/dist/front_angular/:/usr/local/apache2/htdocs/calendarbooking web
+And then goto [http://localhost/calendarbooking/](http://localhost/calendarbooking/) to see the result.
 
-
-#HOW-TO Deploy on OVH cloud
-
-	$ ./docker/docker.sh [all, web, spring, mongo] @server
-
-This docker.sh script automates all the above commands for deploying the 3 services on a remote host. It builds the .tgz packages from the source directories for the 3 services (mongo, spring and web), then transfers .tgz files to the remote host server, and eventually builds the docker images and launches the 3 services on the server following the config described in the docker-compose.yml file.
