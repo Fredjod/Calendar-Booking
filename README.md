@@ -10,7 +10,7 @@ All those components are deployed on a box using only 3 Docker images/containers
 **Pre-requisites:**  
 Make sure that you have installed on your desktop latest version of GIT, Docker, NodeJS and @angular/cli.
 The IDE config files available in the repository (in a separated backup package) are Eclipse/STS for SpringBoot project and Sublime for Angular project.
-If your dev box is MacosX
+Below a set of tools proposal for an MacOSX dev box. Can be adapted following your preferences.
  - For Git and NodeJS, I suggest to use Homebrew [(http://brew.sh/)](http://brew.sh/). Homebrew installation, if needed:
 
 		$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -23,6 +23,7 @@ Then the below commands install Git, Git-lfs (for large backup files), NodeJS, a
 		$ npm install -g @angular/cli
 		
  - Docker: Download it at [https://www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop)
+ - Java, if not alreday installed: [https://www.oracle.com/technetwork/java/javase/downloads/index.html](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
  - Eclipse/STS: [https://spring.io/tools](https://spring.io/tools)
 
 **Source files**  
