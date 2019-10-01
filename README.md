@@ -9,7 +9,6 @@ All those components are deployed on a box using only 3 Docker images/containers
 
 **Pre-requisites:**  
 Make sure that you have installed on your desktop latest version of GIT, Docker, NodeJS and @angular/cli.
-The IDE config files available in the repository (in a separated backup package) are Eclipse/STS for SpringBoot project and Sublime for Angular project.
 Below a set of tools proposal for an MacOSX dev box. Can be adapted following your preferences.
  - For Git and NodeJS, I suggest to use Homebrew [(http://brew.sh/)](http://brew.sh/). Homebrew installation, if needed:
 
@@ -32,7 +31,7 @@ Then you are ready to go for launching the following commands:
 	$ git clone https://github.com/Fredjod/Calendar-Booking
 	$ ./Calendar-Booking/backup.sh -r Calendar-Booking all
 
-The first command is a regular git command retrieving all the repo on your desktop within the './Calendar-Booking' workspace directory. The second command unpacks the Eclipse IDE configuration files, the Angular node_modules directory and the Mongo data of the dev database.
+The first command is a regular git command retrieving all the repo on your desktop within the './Calendar-Booking' workspace directory. The second command unpacks, the .classpath (Java projects), the Angular node_modules directory and the Mongo data of the dev database.
 
 ## Build and deploy the App
 
