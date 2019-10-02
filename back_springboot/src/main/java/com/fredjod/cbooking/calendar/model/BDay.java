@@ -18,7 +18,7 @@ import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
 public class BDay implements Iterable<BEvent> {
 
 	@Id
-    String id;
+    Date id;
 	
 	private List<BEvent> events;
 
@@ -31,12 +31,11 @@ public class BDay implements Iterable<BEvent> {
     public BDay(List<BEvent> events) {
         this.events = events;
     }
-	
+
     @Override
     public String toString() {
         return String.format(
-                "BDay[id=%s], event[0].schedule='%s', event[0].teacher='%s', event[0].stock=%d",
-                id, events.get(0).schedule, events.get(0).teacher, events.get(0).stock);
+                "BDay[id=%s], event[0].schedule='%s', event[0].type='%s', event[0].stock=%d",
+                id, events.get(0).schedule, events.get(0).type, events.get(0).stock);
     }
-	
 }

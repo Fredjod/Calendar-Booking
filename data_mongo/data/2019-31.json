@@ -1,13 +1,13 @@
 [ 
   {
-    "_id": "06/01/19",
+    "_id": "2019-06-01",
     "events": [
       {
         "type": "Cours",
         "schedule": "09h00-12h30",
         "teacher": "Tom",
         "description": "bla bla bla",
-        "stock": "4",
+        "capacity": "4",
         "display_attributes": {
           "stock_class": "blue_dot_stock"
         }
@@ -15,14 +15,14 @@
     ]
   },
   {
-    "_id": "06/02/19",
+    "_id": "2019-06-02",
     "events": [
       {
         "type": "Cours",
         "schedule": "14h00-17h30",
         "teacher": "Tom",
         "description": "bla bla bla",
-        "stock": "4",
+        "capacity": "4",
         "display_attributes": {
           "stock_class": "blue_dot_stock"
         }
@@ -33,7 +33,7 @@
         "schedule": "Journée",
         "teacher": "Tom",
         "description": "bla bla bla",
-        "stock": "6",
+        "capacity": "6",
         "display_attributes": {
           "stock_class": "lightblue_dot_stock"
         }
@@ -41,26 +41,26 @@
     ]
   },
   {
-    "_id": "06/03/19",
+    "_id": "2019-06-03",
     "events": [
       {
         "type": "closed",
         "schedule": "Journée",
         "teacher": "",
         "description": "Fermé pour cause de travaux",
-        "stock": ""
+        "capacity": "0"
       }
     ]
   },
   {
-    "_id": "06/04/19",
+    "_id": "2019-06-04",
     "events": [
       {
         "type": "Cours",
         "schedule": "09h00-12h30",
         "teacher": "Tom",
         "description": "bla bla bla",
-        "stock": "1",
+        "capacity": "4",
         "display_attributes": {
           "stock_class": "blue_dot_stock"
         }
@@ -70,33 +70,7 @@
         "schedule": "14h00-17h30",
         "teacher": "Tom",
         "description": "bla bla bla",
-        "stock": "0",
-        "display_attributes": {
-          "stock_class": "blue_dot_stock"
-        }
-      }
-    ]
-
-  },
-  {
-    "_id": "06/05/19",
-    "events": [
-      {
-        "type": "Cours",
-        "schedule": "09h00-12h30",
-        "teacher": "Tom",
-        "description": "bla bla bla",
-        "stock": "1",
-        "display_attributes": {
-          "stock_class": "blue_dot_stock"
-        }
-      },
-      {
-        "type": "Cours",
-        "schedule": "14h00-17h30",
-        "teacher": "Tom",
-        "description": "bla bla bla",
-        "stock": "0",
+        "capacity": "4",
         "display_attributes": {
           "stock_class": "blue_dot_stock"
         }
@@ -105,14 +79,14 @@
 
   },
   {
-    "_id": "06/06/19",
+    "_id": "2019-06-05",
     "events": [
       {
         "type": "Cours",
         "schedule": "09h00-12h30",
         "teacher": "Tom",
         "description": "bla bla bla",
-        "stock": "1",
+        "capacity": "4",
         "display_attributes": {
           "stock_class": "blue_dot_stock"
         }
@@ -122,7 +96,7 @@
         "schedule": "14h00-17h30",
         "teacher": "Tom",
         "description": "bla bla bla",
-        "stock": "0",
+        "capacity": "4",
         "display_attributes": {
           "stock_class": "blue_dot_stock"
         }
@@ -131,14 +105,14 @@
 
   },
   {
-    "_id": "06/07/19",
+    "_id": "2019-06-06",
     "events": [
       {
         "type": "Cours",
         "schedule": "09h00-12h30",
         "teacher": "Tom",
         "description": "bla bla bla",
-        "stock": "1",
+        "capacity": "4",
         "display_attributes": {
           "stock_class": "blue_dot_stock"
         }
@@ -148,11 +122,54 @@
         "schedule": "14h00-17h30",
         "teacher": "Tom",
         "description": "bla bla bla",
-        "stock": "0",
+        "capacity": "4",
+        "display_attributes": {
+          "stock_class": "blue_dot_stock"
+        }
+      }
+    ]
+
+  },
+  {
+    "_id": "2019-06-07",
+    "events": [
+      {
+        "type": "Cours",
+        "schedule": "09h00-12h30",
+        "teacher": "Tom",
+        "description": "bla bla bla",
+        "capacity": "4",
+        "display_attributes": {
+          "stock_class": "blue_dot_stock"
+        }
+      },
+      {
+        "type": "Cours",
+        "schedule": "14h00-17h30",
+        "teacher": "Tom",
+        "description": "bla bla bla",
+        "capacity": "4",
         "display_attributes": {
           "stock_class": "blue_dot_stock"
         },
-        "alumni": [ "fggr.ff@gmail.com", "f.jacq@free.fr", "gerald.pic@wanadoo.fr" ]
+        "alumni": [ 
+        	{ 
+        		"_id": "klanuc.hug@lilo.fr",
+        		"status": "PENDING"
+        	},
+        	{ 
+        		"_id": "luni.kart@tito.com",
+        		"status": "CONFIRMED"
+        	},
+        	{ 
+        		"_id": "mela.trud@plom.org",
+        		"status": "CANCELED"
+        	},
+        	{ 
+        		"_id": "mega.tor@gmail.com",
+        		"status": "UNKNOWN"
+        	}
+       ]
       }
     ]
   }

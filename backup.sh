@@ -59,17 +59,14 @@ then
 	tar -cf ./backup/dev-env.tar ./.metadata/
 
 	echo -e "+> back_springboot: Tar IDE/Eclipse project config files"
-	tar -uf ./backup/dev-env.tar ./back_springboot/.classpath ./back_springboot/.settings/ ./back_springboot/.project
+	tar -uf ./backup/dev-env.tar ./back_springboot/.classpath
 
 	echo -e "+> sandbox: Tar IDE/Eclipse project config files"
-	tar -uf ./backup/dev-env.tar ./sandbox/.classpath ./sandbox/.settings/ ./sandbox/.project
+	tar -uf ./backup/dev-env.tar ./sandbox/.classpath
 
 	echo -e "+> front_angular: Tar IDE/Eclipse project config files"
 	rm -rf ./front_angular/node_modules/.cache/*
-	tar -uf ./backup/dev-env.tar ./front_angular/.editorconfig ./front_angular/.settings/ ./front_angular/.project ./front_angular/node_modules/
-
-	echo -e "+> Tar other IDE/Eclipse project config files"
-	tar -uf ./backup/dev-env.tar ./data_mongo/.project ./docker/.project
+	tar -uf ./backup/dev-env.tar ./front_angular/node_modules/
 
 	echo -e "> Compress the archives"
 	gzip -9 ./backup/dev-env.tar 

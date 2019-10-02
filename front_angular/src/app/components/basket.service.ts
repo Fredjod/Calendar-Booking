@@ -6,54 +6,54 @@ import { EventPlanningClass } from './event-planning.class';
 };
 */
 
-function isNotUndefined  (element, index, array) { 
-   return (typeof element !== 'undefined'); 
-} 
+function isNotUndefined(element, index, array) {
+  return (typeof element !== 'undefined');
+}
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class BasketService {
-  
-	items:EventPlanningClass[] = new Array();
 
-	addToBasket(item:EventPlanningClass) {
-      this.items.push(item);
-      console.log("basket content add: ", this.items);
-  	}
+  items: EventPlanningClass[] = new Array();
 
-  	removeFromBasket(item:EventPlanningClass) {
-     this.items[this.items.findIndex( (eventItem: EventPlanningClass) => {
-          return item.equals(eventItem);
-        }
-        )] = undefined;
-     this.items = this.items.filter(isNotUndefined);
-     console.log("basket content remove: ", this.items);
-  	}
+  addToBasket(item: EventPlanningClass) {
+    this.items.push(item);
+    console.log('basket content add: ', this.items);
+  }
 
-    isIntoBasket(item:EventPlanningClass): Boolean {
-      if (
-       this.items.findIndex( (eventItem: EventPlanningClass) => {return item.equals(eventItem);} )
-         != -1) {
-        return true;
-      }
-      else { return false; }
+  removeFromBasket(item: EventPlanningClass) {
+    this.items[this.items.findIndex((eventItem: EventPlanningClass) => {
+      return item.equals(eventItem);
     }
+    )] = undefined;
+    this.items = this.items.filter(isNotUndefined);
+    console.log('basket content remove: ', this.items);
+  }
 
-  	getItems() {
-    	return this.items;
-  	}
+  isIntoBasket(item: EventPlanningClass): Boolean {
+    if (
+      this.items.findIndex((eventItem: EventPlanningClass) => { return item.equals(eventItem); })
+      != -1) {
+      return true;
+    }
+    else { return false; }
+  }
 
-  	clearBasket() {
-    	this.items = new Array();
-    	console.log("basket cleared!");
-    	return this.items;
-  	}
+  getItems() {
+    return this.items;
+  }
 
-  	getItemsNumber() {
-    	return this.items.length;
-  	}
+  clearBasket() {
+    this.items = new Array();
+    console.log("basket cleared!");
+    return this.items;
+  }
+
+  getItemsNumber() {
+    return this.items.length;
+  }
 
   constructor() { }
 }
